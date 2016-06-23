@@ -13,7 +13,7 @@ fi
 
 if [ -f "$source" ]; then
 	rm -f a.out
-	$compiler -std=c++11 -I./ -o $target $source
+	$compiler -std=c++11 -g -I./ -o $target $source
 	if  [ ! -f "$target" ]; then
 		echo "Error: compile error"
 		exit 2
